@@ -9,6 +9,7 @@ lerna-debug.log*
 
 node_modules
 dist
+drizzle
 dist-ssr
 *.local
 
@@ -29,3 +30,6 @@ dist-ssr
 !.dev.vars.example
 .env*
 !.env.example
+
+# generated D1 seed
+worker/db/seed.sql

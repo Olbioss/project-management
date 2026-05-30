@@ -6,16 +6,27 @@
 	"$schema": "node_modules/wrangler/config-schema.json",
 	"name": "project-management",
 	"main": "worker/index.ts",
-	"compatibility_date": "2026-05-30",
+	"compatibility_date": "2026-05-31",
 	"assets": {
+		"binding": "ASSETS",
+		"directory": "./dist",
 		"not_found_handling": "single-page-application"
 	},
 	"observability": {
 		"enabled": true
 	},
 	"upload_source_maps": true,
-	"compatibility_flags": [
-		"nodejs_compat"
+	// "compatibility_flags": [
+	// 	"nodejs_compat"
+	// ],
+	"vars": { "ENVIRONMENT": "production" },
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "project-management",
+			"database_id": "05d2a41c-8741-468e-9e58-2e8db889cb4f",
+			"migrations_dir": "drizzle"
+		}
 	]
 	/**
 	 * Smart Placement
