@@ -2,6 +2,7 @@ import { lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router";
 import HomePage from "./pages/home";
 import { Layout } from "./pages/layout";
+import NotFoundPage from "./pages/not-found";
 
 const ProjectPage = lazy(() => import("./pages/project"));
 const TimelinePage = lazy(() => import("./pages/timeline"));
@@ -32,6 +33,7 @@ function App() {
           <Route path="/priority/medium" element={<MediumPage />} />
           <Route path="/priority/low" element={<LowPage />} />
           <Route path="/priority/backlog" element={<BacklogPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
